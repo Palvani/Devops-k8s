@@ -1,0 +1,22 @@
+# Deployment manifest
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mnptech-dev-blue
+spec:
+  replicas: 2  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: mnptech-blue
+  template:
+    metadata:
+      labels:
+        app: mnptech-blue
+    spec:
+      containers:
+      - name: mnptech-dev-blue
+        image: devopsawsr/devopsk8s:B # Replace with your Docker image
+        ports:
+        - containerPort: 80  # Port your application listens on
+      imagePullSecrets:
+      - name: dockerhub-secret  # Use the secret to pull the Docker image

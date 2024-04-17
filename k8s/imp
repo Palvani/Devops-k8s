@@ -1,0 +1,6 @@
+## To create secrets
+ kubectl create secret docker-registry dockerhub-secret \
+— docker-server=dcoker.io \
+— docker-username=devopsawsr \
+— docker-password=reddy1100 \
+— docker-email=devopsawsr1100@gmail.com
