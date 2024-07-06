@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: techapp-service
   labels:
-    app: mnptech-blue
+    app: mnptech-green
 spec:
   selector:
-    app: mnptech-blue
+    app: mnptech-green
 
   ports:
     - port: 80
